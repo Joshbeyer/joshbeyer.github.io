@@ -1,0 +1,67 @@
+.navigation
+  background-color: #333
+  border-bottom: 1px solid #1a1a1a
+  min-height: 60px
+  width: 100%
+  z-index: 999
+  .navigation .navigation-wrapper
+    position: relative
+    z-index: 9999
+  .navigation .logo
+    float: left
+    max-height: 60px
+    padding-left: 1em
+    padding-right: 2em
+    .navigation .logo img 
+      max-height: 60px
+      padding: 0.8em 0
+  .navigation .navigation-menu-button
+    color: rgba(255, 255, 255, 0.7)
+    display: block
+    float: right
+    line-height: 60px
+    margin: 0
+    padding-right: 1em
+    text-decoration: none
+    text-transform: uppercase
+    .navigation .navigation-menu-button:focus, .navigation .navigation-menu-button:hover 
+      color: white
+  .navigation nav 
+    float: none
+    min-height: 60px
+    z-index: 9999999
+  .navigation ul.navigation-menu 
+    clear: both
+    display: none
+    margin: 0 auto
+    overflow: visible
+    padding: 0
+    width: 100%
+    z-index: 9999
+    .navigation ul.navigation-menu.show 
+      display: block
+  .navigation ul li.nav-link 
+    background: #333
+    display: block
+    line-height: 60px
+    overflow: hidden
+    padding-right: 0.8em
+    text-align: right
+    width: 100%
+    z-index: 9999
+    .navigation ul li.nav-link a 
+      color: rgba(255, 255, 255, 0.7)
+      display: inline-block
+      text-decoration: none
+      .navigation ul li.nav-link a:focus, .navigation ul li.nav-link a:hover
+        color: white
+  .navigation .active-nav-item a
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5)
+    padding-bottom: 3px
+  .navigation .navigation-tools
+    background: #505050
+    clear: both
+    display: block
+    height: 60px
+
+/*# sourceMappingURL=output.sass.map */

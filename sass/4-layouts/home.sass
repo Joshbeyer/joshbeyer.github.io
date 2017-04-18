@@ -1,0 +1,128 @@
+// #################
+// ----- About -----
+// #################
+#about
+  padding: 100px 50px 100px 50px
+  text-align: center
+  line-height: 1.6em
+  h1
+    font-size: 2em
+
+// ###################
+// ----- Contact -----
+// ###################
+#contact
+  .form-wrapper
+    background: lighten(#ccc,15)
+    padding: 25px
+    max-width: 350px
+    margin: 120px auto
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2)
+    color: #333
+    h1
+      text-align: center
+      font-size: 2em
+      padding: 10px
+    #form-btn
+      text-align: center
+      padding-top: 10px
+    textarea
+      resize: none
+    #submit-btn
+      background: #34495E
+      &:hover
+        background: #405a74
+
+// ##################
+// ----- Slider -----
+// ##################
+
+
+.carousel-control.left, .carousel-control.right
+  background-image: none
+
+.item
+  padding: 100px 2em
+  background: lighten(#405a74, 40)
+  .card
+    margin: 0 auto !important
+    text-align: center
+    max-width: 900px
+    .card-image
+      display: inline-block
+      max-width: 700px
+      img
+        max-width: 100%
+        border-radius: 20px
+        -webkit-transform: scale(1)
+        transform: scale(1)
+        -webkit-transition: .3s ease-in-out
+        transition: all .3s ease-in-out
+        &:hover
+          -webkit-transform: scale(1.2)
+          transform: scale(1.2)
+          margin-bottom: 2em
+  h1
+    padding: 1.2em
+    font-size: 2em
+  .description
+    font-size: 1.2em
+    font-weight: 200
+  .skills-used
+    font-size: .9em
+    font-weight: 200
+    text-transform: uppercase
+
+
+// ##################
+// ----- Footer -----
+// ##################
+footer
+  text-align: center
+  background: #283a4a
+  .social-links
+    // margin: 15px 0
+    width: 100%
+    i
+      padding: 25px
+      color: #fff
+      &:visited
+        color: #fff
+      &:hover
+        color: #95a5a6
+  p
+    color: white
+    padding: 20px 0
+    margin-bottom: 0
+    font-size: 11px
+    background: rgba(0,0,0,.1)
+
+
+
+@media only screen and (max-width: 940px)
+  .carousel-control
+    display: none
+  .item
+    .card-image
+      img
+        &:hover
+          -o-transform: none !important
+          -moz-transform: none !important
+          -ms-transform: none !important
+          -webkit-transform: none !important
+          transform: none !important
+
+// @media only screen and (min-width: 1440px)
+//   /* styles for MacBook Pro-sized screens and larger */
+
+// @media only screen and (min-width: 1200px)
+//   /* styles for wide screens */
+
+// @media only screen and (max-width: 320px)
+//   /* styles for narrow screens */
+//   // header
+//   //   .content-wrapper
+//   //     background-image: url('./../img/new-header-small.png')
+
+// @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)
+//   /* styles for Retina-type displays

@@ -1,0 +1,107 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(http-equiv='X-UA-Compatible', content='ie=edge')
+        link(href='https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900', rel='stylesheet')
+        link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css', integrity='sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp', crossorigin='anonymous')
+        link(rel='stylesheet', href='css/main.css')
+        title Document
+    body
+        //- include includes/header
+        .back-to-top
+            a(href="#content-wrapper")
+                i(class="fa fa-arrow-circle-up fa-4x" aria-hidden="true")
+
+        header
+            #content-wrapper
+                img(src="img/avatar.png", alt="")
+                h1 Josh Beyer
+                h2 Web Developer
+                a(href="https://github.com/Joshbeyer")
+                    i.fa.fa-github.fa-2x(aria-hidden='true')
+                a(href="https://twitter.com/JoshMBeyer")
+                    i.fa.fa-twitter.fa-2x(aria-hidden='true')
+                a(href="https://linkedin.com/in/joshbeyer")
+                    i.fa.fa-linkedin.fa-2x(aria-hidden='true')
+                a(href="#contact")
+                    i.fa.fa-envelope-o.fa-2x(aria-hidden='true')
+
+        section#about
+            .container
+                .row
+                    h1 About
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam malesuada laoreet sapien, nec posuere eros sagittis in. Duis elit massa, ullamcorper sit amet posuere vel, commodo at sem. Nam at ultricies nisi, ut sollicitudin elit. Duis posuere urna tempus lorem cursus blandit. Vivamus posuere neque quis lorem consequat fermentum. Vivamus sodales, libero in imperdiet vestibulum, justo lectus feugiat massa, at viverra neque quam at lorem. Fusce dictum diam justo, vitae convallis velit euismod vitae. Donec sit amet finibus erat. Vivamus diam magna, ultricies et nisi ac, blandit aliquet lacus. Curabitur sit amet eleifend nulla. Vivamus scelerisque massa justo. Praesent sollicitudin sem turpis, ac aliquam diam suscipit non. Sed at iaculis ligula.
+        
+        #carousel-example-generic.carousel.slide(data-ride='carousel')
+            ol.carousel-indicators
+                li.active(data-target='#carousel-example-generic', data-slide-to='0')
+                li(data-target='#carousel-example-generic', data-slide-to='1')
+                li(data-target='#carousel-example-generic', data-slide-to='2')
+            .carousel-inner(role='listbox')
+                .item.active
+                    .card
+                        .card-image
+                            img(src='img/slide-1.jpg', alt='...')
+                        h1.title Site Name
+                        p.description A short description of the project
+                        p.skills-used Html - Css - Js - jQuery - pug - sass  
+                        //- .carousel-caption 
+                .item
+                    .card
+                        .card-image
+                            img(src='img/slide-2.jpg', alt='...')
+                        h1.title Site Name
+                        p.description A short description of the project
+                        p.skills-used Html - Css - Js - jQuery - pug - sass  
+                            //- .carousel-caption 
+                .item
+                    .card
+                        .card-image
+                            img(src='img/slide-3.jpg', alt='...')
+                        h1.title Site Name
+                        p.description A short description of the project
+                        p.skills-used Html - Css - Js - jQuery - pug - sass  
+                            //- .carousel-caption  
+            a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+                span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+                |  
+                span.sr-only Previous
+            a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+                span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+                |  
+                span.sr-only Next
+
+
+        section#contact
+            .container
+                .row
+                    .form-wrapper
+                        h1 Lets work together.
+                        form#contact_form(action='#', method='POST', enctype='multipart/form-data')
+                            label(for='name') Name:
+                            input#name.input(name='name', type='text', value='', size='30')
+                            label(for='email') Email:
+                            input#email.input(name='email', type='text', value='', size='30')
+                            label(for='message') Your message:
+                            textarea#message.input(name='message', rows='7', cols='30')
+                            #form-btn
+                                input#submit-btn(type='submit', value='Send email')
+        footer
+            .social-links
+                a(href="https://github.com/Joshbeyer")
+                    i.fa.fa-github.fa-2x(aria-hidden='true')
+                a(href="https://twitter.com/JoshMBeyer")
+                    i.fa.fa-twitter.fa-2x(aria-hidden='true')
+                a(href="www.linkedin.com/in/joshbeyer")
+                    i.fa.fa-linkedin.fa-2x(aria-hidden='true')
+            p &copy; 2017 Josh beyer
+        
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+        script(src='js/header.js')
+        script(src='js/smooth-scroll.js')
+        script(src='js/back-to-top.js')
