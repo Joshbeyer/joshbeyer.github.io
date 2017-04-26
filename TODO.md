@@ -1,6 +1,5 @@
 # Todo list
-* Finish configuring the slider,
+* Remove the dot icons from slider as it would look odd with many items
 * Work on the header
 * Personalize the site's text
-* Link the social links to accounts
 * Update avatar placeholder
