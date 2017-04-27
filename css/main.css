@@ -638,12 +638,14 @@ footer {
         color: #9b59b6; }
       .skills-overview .skills-container .skill-three .sass-icon {
         max-height: 75px;
-        margin-top: 30px; }
+        margin-top: 30px;
+        margin-bottom: 20px; }
     .skills-overview .skills-container .skill-four i {
       color: #2ecc71; }
     .skills-overview .skills-container .skill-four .framework-icon {
       max-height: 75px;
-      margin-top: 30px; }
+      margin-top: 30px;
+      margin-bottom: 20px; }
 
 .resume {
   border-bottom: solid 1px #ccc;
