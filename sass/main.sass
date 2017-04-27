@@ -32,7 +32,7 @@ $dark: rgb(51,51,51)
 
 .parallax-static-content
   color: #F4F4F4
-  padding: 20% 0
+  padding: 20% 2em
   position: relative
   z-index: 9
   .heading
@@ -91,7 +91,7 @@ $dark: rgb(51,51,51)
   p
     padding: 0 2em 100px 2em
     margin: 0 auto
-    max-width: 800px
+    max-width: 1060px
 
     font:
       size: 1.5em
@@ -107,6 +107,7 @@ $dark: rgb(51,51,51)
   margin: 0
   color: #f3f3f3
   position: relative
+  padding: 0 50px
   &:after
     content: ''
     position: absolute
@@ -140,22 +141,34 @@ $dark: rgb(51,51,51)
         font:
           size: 1.2em
           weight: 200
-      @media screen and (max-width: 600px)
+      @media screen and (max-width: 990px)
           @include stack()
+          p
+            max-width: 700px
+            @include center(700px)
 
 .skills-overview
   // border-bottom: solid 1px #ccc
   margin-top: 100px
+  // padding: 0 150px
   padding-bottom: 150px
   .skills-container:first-child
     border-bottom: solid 1px #ccc
+    @media screen and (max-width: 875px)
+      border: none
   &:nth-child(2)
     margin-bottom: 400px !important
 
   // $custom-grid--two: (columns: 2,gutter: 2rem,)
   .skills-container
+    @media screen and (max-width: 875px)
+      padding: 0 10px
+      p
+        max-width: 400px
+        @include center(400px)
     // @include grid-container
     // @include grid-visual
+
     text-align: center
     @include center(1060px)
     h1
@@ -169,11 +182,11 @@ $dark: rgb(51,51,51)
     .skill
       @include column(1/2)
       margin-right: 0 !important
-      @media screen and (max-width: 600px)
-        @include stack()
       height: 450px
       border-radius: 0px
       padding: 25px
+      @media screen and (max-width: 875px)
+        @include stack()
       i
         color: orange
         // float: left
@@ -189,14 +202,17 @@ $dark: rgb(51,51,51)
         font:
           size: 1.15em
           weight: 200
-      &:hover
     .skill-one
       border-right: solid 1px #ccc
+      @media screen and (max-width: 875px)
+        border: none
     .skill-two
       i
         color: $vivid
     .skill-three
       border-right: solid 1px #ccc
+      @media screen and (max-width: 875px)
+        border: none
       i
         color: rgb(155,89,182)
       .sass-icon
@@ -210,10 +226,15 @@ $dark: rgb(51,51,51)
         max-height: 75px
         margin-top: 30px
         margin-bottom: 20px
+    
 .resume
-  @include grid-container
+  // @include grid-container
+  @include center(1060px)
+  padding: 0 50px
   border-bottom: solid 1px #ccc
   position: relative
+  @media screen and (max-width: 960px)
+    border: none
   &:after
     content: ''
     position: absolute
@@ -234,13 +255,15 @@ $dark: rgb(51,51,51)
   .slide-in-right
     @include column(1/2)
     padding: 100px 20px
-    @media screen and (max-width: 600px)
+    @media screen and (max-width: 960px)
       @include stack()
       text-align: center
-      padding: 35px
+      padding: 25px 35px 80px 35px
       h1
         padding-top: 80px
         padding-bottom: 20px
+      p
+        padding-bottom: 30px
   .slide-in-left
     h1
       font-size: 3em
@@ -308,12 +331,11 @@ $dark: rgb(51,51,51)
     background-image: linear-gradient(to bottom right,#002f4b,darken($vivid,60))
     opacity: .5
   .content
-
     color: #fff
     text-align: center
-    padding 0 120px 
     padding-top: 140px
     &:after
+      padding: 0 50px 
       content: 'I firmly believe good design should tell a story.'
       font:
         size: 2em
@@ -359,7 +381,7 @@ $dark: rgb(51,51,51)
   padding: 50px 20px
   position: relative
   .container
-    @include grid-container
+    // @include grid-container
     width: 80%
     margin: 0 auto
     text-align: center
@@ -367,12 +389,16 @@ $dark: rgb(51,51,51)
       color: darken($vivid, 25)
       transition: color .2s
       margin: 20px
+      @media screen and (max-width: 405px)
+        @include stack()
+        @include center(405px)
       &:hover
         color: #F4F4F4
   &:before
     content: ''
     position: absolute
-    left: 49%
+    left: 50%
+    margin-left: -20px
     top: 0
     width: 0
     height: 0
@@ -383,7 +409,8 @@ $dark: rgb(51,51,51)
   &:after
     content: ''
     position: absolute
-    left: 49%
+    left: 50%
+    margin-left: -20px
     top: 100%
     width: 0
     height: 0
@@ -393,9 +420,8 @@ $dark: rgb(51,51,51)
     clear: both
     // background: $vivid
 .contact-me
-  @include grid-container
   text-align: center
-  padding: 100px 20px
+  padding: 100px 50px
   h1
     font-size: 3.5em
   h2
@@ -429,8 +455,8 @@ $dark: rgb(51,51,51)
           margin: 0 auto !important
           min-width: 100%
           padding: 10px 50px
-      @media screen and (max-width: 600px)
-        margin-bottom: 0
+        @media screen and (max-width: 425px)
+          padding: 10px
       
         // stack()
 
@@ -451,15 +477,22 @@ $dark: rgb(51,51,51)
         border-bottom: solid 1px $vivid
         @media screen and (max-width: 600px)
           @include stack()
-          float: left !important
-          margin: 45px auto !important
-          min-width: 100%
-          margin-top: 0 !important
+          @include center(600px)
+          width: 80%
+         
+        @media screen and (max-width: 425px)
+          // padding: 10px
+          // margin: 0 auto !important
+          // min-width: 100%
+          @include center(425px)
+          // padding: 0 50px
+          
           
       input
         width: 120px
       @media screen and (max-width: 600px)
-        padding: 10px 50px
+        // padding: 10px 50px
+        text-align: center
         // margin-top: 0
 footer
   background: rgb(51,51,51)
