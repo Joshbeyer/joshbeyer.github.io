@@ -27,22 +27,24 @@
     </div>
     <section class="welcome">
       <h1> I'm so happy you're visiting</h1>
-      <p>I designed this site so you can get to know me on a personal level. My facination with experience design, some fun works, more  </p>
+      <p>I designed this site so you can get to know me on a personal level. My facination with experience design, some fun works, and more.   </p>
     </section>
     <section class="about">
       <div class="avatar"><img src="img/avatar.png" alt=""></div>
       <div class="container">
         <div class="info-card">
           <h1> Web Developer</h1>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea cum at, totam fugiat saepe voluptatum. Quo nemo placeat, eligendi debitis!</p>
+          <p>The idea that you can reach a lot of people by just creating a single website. The idea that you can provide valuable information and make their life easier by using something that you created. The ability to empower people from a thousand miles away and they don’t even know you. That to me is priceless.</p>
         </div>
         <div class="info-card">
           <h1> Musician</h1>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea cum at, totam fugiat saepe voluptatum. Quo nemo placeat, eligendi debitis!</p>
+          <p> I started teaching myself to play the guitar when I was fourteen, and someday I hope to lean the piano. The beautiful thing is, music an be like a time machine. The lyrics, the melody, the emotions it brings, can take you back to a moment in time like nothing else can.</p>
         </div>
         <div class="info-card">
-          <h1> Something</h1>
-          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea cum at, totam fugiat saepe voluptatum. Quo nemo placeat, eligendi debitis!</p>
+          <h1> Avid Learner</h1>
+          <p>Learning is big passion of mine. I am always in the pursuit of learning something new, and teaching myself new skills. </p>
+          <blockquoute>
+             “Wisdom is not a product of schooling but of the lifelong attempt to acquire it.” <br><span>― Albert Einstein</span></blockquoute>
         </div>
       </div>
     </section>
@@ -50,21 +52,22 @@
       <div class="skills-container">
         <h1>What I offer</h1>
         <h2>These are the skills I'm most proud of</h2>
-        <div class="skill"><i class="fa fa-html5 fa-5x" aria-hidden="true"></i>
+        <div class="skill skill-one"><i class="fa fa-html5 fa-5x" aria-hidden="true"></i>
           <h1>HTML & CSS</h1>
           <p> I believe in well organized, clean, symantic, and modular HTML and CSS. For readiblity, performance, scalability, and modular development. From taking a mobile first approach, to cross-browser compatibility, the applications work on all devices, all the time.</p>
         </div>
-        <div class="skill"><i class="fa fa-html5 fa-5x" aria-hidden="true"></i>
+        <div class="skill skill-two"><i class="fa fa-code fa-5x" aria-hidden="true"></i>
           <h1>Javascript & jQuery</h1>
           <p> With a strong foundation in Javascript, I can utilize libraries such as jQuery to radpily speed up the process of front-end development and create beautiful user interfaces.</p>
         </div>
       </div>
       <div class="skills-container">
-        <div class="skill"><i class="fa fa-html5 fa-5x" aria-hidden="true"></i>
+        <div class="skill skill-three"><img class="sass-icon" src="http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg" alt="">
           <h1>Preprocessors</h1>
           <p> Using SASS adds extra functionality to CSS and keeps my CSS scalable and easier to work with. Turning the code into a well-formatted and cross-browser friendly CSS file.</p>
         </div>
-        <div class="skill"><i class="fa fa-html5 fa-5x" aria-hidden="true"></i>
+        <div class="skill skill-four">
+          <image class="framework-icon" src="img/bootstrap.png" alt=""></image>
           <h1>Frameworks</h1>
           <p> With the all the frameworks out, I have a thorough understanding of all the lastest and widely used. Using these saves time setting up the project and allows me to get right into crafting a new beutiful design.</p>
         </div>
@@ -100,13 +103,13 @@
     <section class="work">
       <h1>My Work</h1>
       <h2>Some projects I've worked on</h2>
-      <div class="grid-items"><a class="grid-item" href=""><img src="img/temp.jpg" alt="">
+      <div class="siema"><a class="grid-item" href=""><img src="img/temp.jpg" alt="">
           <h1>Project</h1>
           <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p></a> <a class="grid-item" href=""><img src="img/temp.jpg" alt="">
           <h1>Project</h1>
           <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p></a> <a class="grid-item" href=""><img src="img/temp.jpg" alt="">
           <h1>Project</h1>
-          <p>Lorem ipsum dolor sit amet, elit. Rem, illum.</p></a></div>
+          <p>Lorem</p></a></div><i class="fa fa-chevron-circle-left fa-3x prev" aria-hidden="true"></i><i class="fa fa-chevron-circle-right fa-3x next" aria-hidden="true"></i>
     </section>
     <section class="social-links">
       <div class="container"><i class="fa fa-twitter fa-4x" aria-hidden="true"></i><i class="fa fa-linkedin fa-4x" aria-hidden="true"></i><i class="fa fa-github fa-4x" aria-hidden="true"></i></div>
@@ -144,5 +147,24 @@
     <script src="js/header.js"></script>
     <script src="js/typed/js/typed.js"></script>
     <script src="js/typer.js"></script>
+    <script src="js/siema.min.js"></script>
+    <script>
+      const mySiema = new Siema({
+      	duration: 1000,
+      	loop: true,
+      	easing: 'ease-out',
+      	perPage: 1,
+      	startIndex: 0,
+      	draggable: true,
+      	threshold: 20,
+      	onInit: () => {},
+      	onChange: () => {}
+      });
+      window.setInterval(function(){
+      	$('.next').click();
+      }, 3000);
+      document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
+      document.querySelector('.next').addEventListener('click', () => mySiema.next());
+    </script>
   </body>
 </html>

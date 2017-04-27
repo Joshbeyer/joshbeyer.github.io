@@ -411,16 +411,6 @@ footer {
   padding: 20% 0;
   position: relative;
   z-index: 9; }
-  .parallax-static-content::after {
-    clear: both;
-    content: "";
-    display: block; }
-  .parallax-static-content .avatar {
-    width: calc(100% - 40px);
-    float: left;
-    margin-left: 20px; }
-    .parallax-static-content .avatar img {
-      max-width: 200px; }
   .parallax-static-content .heading {
     text-align: left;
     padding: 25px;
@@ -488,15 +478,23 @@ footer {
     font-size: 1.5em;
     font-weight: 200; }
 
-.test {
-  height: 400px;
-  width: 100%; }
-
 .about {
   background: #333333;
   border-bottom: solid 1px #ccc;
   margin: 0;
-  color: #f3f3f3; }
+  color: #f3f3f3;
+  position: relative; }
+  .about:after {
+    content: '';
+    position: absolute;
+    left: 49%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #333;
+    clear: both; }
   .about .avatar img {
     width: auto;
     max-width: 1060px;
@@ -535,7 +533,7 @@ footer {
       width: 31.33333%;
       margin-left: 0%;
       margin-right: 3%;
-      padding: 5px 50px;
+      padding: 5px 10px;
       text-align: center; }
       .about .container .info-card::after {
         content: '';
@@ -563,9 +561,12 @@ footer {
             margin-right: auto; } }
 
 .skills-overview {
-  border-bottom: solid 1px #ccc;
   margin-top: 100px;
-  padding-bottom: 100px; }
+  padding-bottom: 150px; }
+  .skills-overview .skills-container:first-child {
+    border-bottom: solid 1px #ccc; }
+  .skills-overview:nth-child(2) {
+    margin-bottom: 400px !important; }
   .skills-overview .skills-container {
     text-align: center;
     width: auto;
@@ -593,29 +594,16 @@ footer {
       width: 48.5%;
       margin-left: 0%;
       margin-right: 3%;
-      box-sizing: border-box;
-      border: 1px solid #ededed;
-      margin-bottom: 10px;
-      border: solid 2px #e6e6e6;
-      margin-bottom: 25px;
-      height: 275px;
+      margin-right: 0 !important;
+      height: 450px;
       border-radius: 0px;
-      padding: 25px;
-      margin-bottom: 15px;
-      margin-top: 15px; }
+      padding: 25px; }
       .skills-overview .skills-container .skill::after {
         content: '';
         display: table;
         clear: both; }
-      .skills-overview .skills-container .skill:nth-child(n) {
-        margin-right: 3%;
-        float: left;
-        clear: none; }
-      .skills-overview .skills-container .skill:nth-child(2n) {
-        margin-right: 0%;
-        float: right; }
-      .skills-overview .skills-container .skill:nth-child(2n + 1) {
-        clear: both; }
+      .skills-overview .skills-container .skill:last-child {
+        margin-right: 0%; }
       @media screen and (max-width: 600px) {
         .skills-overview .skills-container .skill {
           display: block;
@@ -630,23 +618,51 @@ footer {
             margin-right: auto; } }
       .skills-overview .skills-container .skill i {
         color: orange;
-        float: left;
         padding: 25px; }
       .skills-overview .skills-container .skill h1 {
         color: #5faee3;
-        font-size: 1.5em;
+        font-size: 1.8em;
         font-weight: 300; }
       .skills-overview .skills-container .skill p {
-        text-align: left;
+        text-align: center;
+        padding: 25px;
         font-size: 1.15em;
         font-weight: 200; }
+    .skills-overview .skills-container .skill-one {
+      border-right: solid 1px #ccc; }
+    .skills-overview .skills-container .skill-two i {
+      color: #3498db; }
+    .skills-overview .skills-container .skill-three {
+      border-right: solid 1px #ccc; }
+      .skills-overview .skills-container .skill-three i {
+        color: #9b59b6; }
+      .skills-overview .skills-container .skill-three .sass-icon {
+        max-height: 75px;
+        margin-top: 30px; }
+    .skills-overview .skills-container .skill-four i {
+      color: #2ecc71; }
+    .skills-overview .skills-container .skill-four .framework-icon {
+      max-height: 75px;
+      margin-top: 30px; }
 
 .resume {
-  border-bottom: solid 1px #ccc; }
+  border-bottom: solid 1px #ccc;
+  position: relative; }
   .resume::after {
     clear: both;
     content: "";
     display: block; }
+  .resume:after {
+    content: '';
+    position: absolute;
+    left: 49%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #f3f3f3;
+    clear: both; }
   .resume .container {
     width: auto;
     max-width: 1060px;
@@ -742,7 +758,7 @@ footer {
 
 .parallax {
   /* The image used */
-  background-image: url("./../img/filler.jpg");
+  background-image: url("./../img/para.jpeg");
   /* Full height */
   height: 300px;
   /* Create the parallax scrolling effect */
@@ -759,7 +775,7 @@ footer {
     bottom: 0;
     left: 0;
     background-image: linear-gradient(to bottom right, #002f4b, black);
-    opacity: .4; }
+    opacity: .5; }
   .parallax .content {
     color: #fff;
     text-align: center;
@@ -793,13 +809,19 @@ footer {
   .work .grid-item {
     width: calc(33.33333% - 26.66667px);
     float: left;
-    margin-left: 20px; }
-    .work .grid-item:hover {
-      background-color: #3498db; }
-    .work .grid-item h1 {
-      color: #f3f3f3; }
-    .work .grid-item p {
-      color: #f3f3f3; }
+    margin-left: 20px;
+    width: auto;
+    max-width: 500px;
+    float: none;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0; }
+    .work .grid-item::after {
+      content: '';
+      display: table;
+      clear: both; }
     @media screen and (max-width: 600px) {
       .work .grid-item {
         display: block;
@@ -813,10 +835,18 @@ footer {
           margin-left: auto; }
         .work .grid-item:last-child {
           margin-right: auto; } }
+  .work .prev,
+  .work .next {
+    padding: 25px; }
+    .work .prev:hover,
+    .work .next:hover {
+      color: #3498db;
+      transition: color .25s; }
 
 .social-links {
   background: #3498db;
-  padding: 50px 20px; }
+  padding: 50px 20px;
+  position: relative; }
   .social-links .container {
     width: 80%;
     margin: 0 auto;
@@ -831,6 +861,28 @@ footer {
       margin: 20px; }
       .social-links .container i:hover {
         color: #F4F4F4; }
+  .social-links:before {
+    content: '';
+    position: absolute;
+    left: 49%;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #333;
+    clear: both; }
+  .social-links:after {
+    content: '';
+    position: absolute;
+    left: 49%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #3498db;
+    clear: both; }
 
 .contact-me {
   text-align: center;

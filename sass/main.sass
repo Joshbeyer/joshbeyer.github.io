@@ -35,11 +35,6 @@ $dark: rgb(51,51,51)
   padding: 20% 0
   position: relative
   z-index: 9
-  @include grid-container
-  .avatar
-    @include grid-column(12)
-    img
-        max-width: 200px
   .heading
     text-align: left
     padding: 25px
@@ -104,31 +99,38 @@ $dark: rgb(51,51,51)
 
 
 
-.test
-  height: 400px
-  width: 100%
+
 
 .about
   background: $dark
   border-bottom: solid 1px #ccc
   margin: 0
   color: #f3f3f3
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    left: 49%
+    top: 100%
+    width: 0
+    height: 0
+    border-left: 20px solid transparent
+    border-right: 20px solid transparent
+    border-top: 20px solid #333
+    clear: both
   .avatar
     img
       @include center(1060px)
       width: 130px
       position: relative
       top: -75px
-      // border-radius: 65px
-      // background: #F4F4F4
-  
   .container
     @include center(1060px)
     margin: 0 auto
     padding-bottom: 100px
     .info-card
       @include column(1/3)
-      padding: 5px 50px
+      padding: 5px 10px
       text-align: center
       h1
         font:
@@ -142,9 +144,13 @@ $dark: rgb(51,51,51)
           @include stack()
 
 .skills-overview
-  border-bottom: solid 1px #ccc
+  // border-bottom: solid 1px #ccc
   margin-top: 100px
-  padding-bottom: 100px
+  padding-bottom: 150px
+  .skills-container:first-child
+    border-bottom: solid 1px #ccc
+  &:nth-child(2)
+    margin-bottom: 400px !important
 
   // $custom-grid--two: (columns: 2,gutter: 2rem,)
   .skills-container
@@ -161,48 +167,62 @@ $dark: rgb(51,51,51)
         weight: 200
       margin-bottom: 80px
     .skill
-      // background: #F4F5F9
-      @include column(1/2, $cycle: 2)
-      box-sizing: border-box
-      border: 1px solid #ededed
-      margin-bottom: 10px
+      @include column(1/2)
+      margin-right: 0 !important
       @media screen and (max-width: 600px)
         @include stack()
-      
-
-
-
-      // box-shadow: 3px 2px 1px #ccc
-      border: solid 2px lighten(#ccc,10)
-      margin-bottom: 25px
-      height: 275px
+      height: 450px
       border-radius: 0px
       padding: 25px
-      margin:
-        bottom: 15px
-        top: 15px
       i
         color: orange
-        float: left
+        // float: left
         padding: 25px
       h1
         color: lighten($vivid,10)
         font:
-          size: 1.5em
+          size: 1.8em
           weight: 300
       p
-        text-align: left
+        text-align: center
+        padding: 25px
         font:
           size: 1.15em
           weight: 200
       &:hover
-        // background: rgb(241,64,75)
-        // color: #f3f3f3
-        // transition: color .2s
-        // transition: background .2s
+    .skill-one
+      border-right: solid 1px #ccc
+    .skill-two
+      i
+        color: $vivid
+    .skill-three
+      border-right: solid 1px #ccc
+      i
+        color: rgb(155,89,182)
+      .sass-icon
+        max-height: 75px
+        margin-top: 30px
+    .skill-four
+      i
+        color: rgb(46,204,113)
+      .framework-icon
+        max-height: 75px
+        margin-top: 30px
 .resume
   @include grid-container
   border-bottom: solid 1px #ccc
+  position: relative
+  &:after
+    content: ''
+    position: absolute
+    left: 49%
+    top: 100%
+    width: 0
+    height: 0
+    border-left: 20px solid transparent
+    border-right: 20px solid transparent
+    border-top: 20px solid #f3f3f3
+    clear: both
   .container
     // @include grid-container
     // width: 80%
@@ -264,10 +284,10 @@ $dark: rgb(51,51,51)
         color: #F4F4F4
         position: absolute
       // position: absolute
-      // background: red
+
 .parallax
   /* The image used */
-  background-image: url('./../img/filler.jpg')
+  background-image: url('./../img/para.jpeg')
   /* Full height */
   height: 300px
   /* Create the parallax scrolling effect */
@@ -284,7 +304,7 @@ $dark: rgb(51,51,51)
     bottom: 0
     left: 0
     background-image: linear-gradient(to bottom right,#002f4b,darken($vivid,60))
-    opacity: .4
+    opacity: .5
   .content
 
     color: #fff
@@ -310,6 +330,7 @@ $dark: rgb(51,51,51)
   color: #F4F4F4
   text-align: center
   padding: 100px 20px
+
   h1
     font-size: 3em
   h2
@@ -318,20 +339,23 @@ $dark: rgb(51,51,51)
     padding-bottom: 100px
   .grid-item
     @include grid-column(4)
-    &:hover
-      background-color: $vivid
-    h1
-      color: #f3f3f3
-    p
-      color: #f3f3f3
+    @include center(500px)
     @media screen and (max-width: 600px)
       @include stack()
       padding: 25px
-
+    
+  .prev,
+  .next
+    padding: 25px
+    &:hover
+      color: $vivid
+      transition: color .25s
+    // position: relative
+  .next
 .social-links
-  // background: rgb(65, 233, 242)
   background: $vivid
   padding: 50px 20px
+  position: relative
   .container
     @include grid-container
     width: 80%
@@ -343,6 +367,29 @@ $dark: rgb(51,51,51)
       margin: 20px
       &:hover
         color: #F4F4F4
+  &:before
+    content: ''
+    position: absolute
+    left: 49%
+    top: 0
+    width: 0
+    height: 0
+    border-left: 20px solid transparent
+    border-right: 20px solid transparent
+    border-top: 20px solid #333
+    clear: both
+  &:after
+    content: ''
+    position: absolute
+    left: 49%
+    top: 100%
+    width: 0
+    height: 0
+    border-left: 20px solid transparent
+    border-right: 20px solid transparent
+    border-top: 20px solid $vivid
+    clear: both
+    // background: $vivid
 .contact-me
   @include grid-container
   text-align: center
@@ -451,13 +498,7 @@ footer
 
 
 
-// @media screen and (max-width: 700px)
-
-
-
-
-
-
+//mobile
 
 
 
